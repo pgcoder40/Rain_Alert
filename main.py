@@ -13,9 +13,9 @@ parameters={
 response=requests.get(url="https://api.openweathermap.org/data/2.5/forecast",params=parameters)
 response.raise_for_status()
 data=response.json()
-print(data)
+# print(data)
 ids = [forecast["weather"][0]["id"] for forecast in data["list"][:4]]
-print(ids)
+# print(ids)
 will_rain=False
 for i in ids:
     if i <700:
@@ -30,7 +30,8 @@ if will_rain:
     )
 
     print(message.status)
-else:print("No rain is expected today. You can step out without an umbrella!")
+else:
+    print("No rain is expected today. You can step out without an umbrella!")
 
 
 
