@@ -30,8 +30,10 @@ if will_rain:
     )
 
     print(message.status)
+    print(ids)
 else:
     print("No rain is expected today. You can step out without an umbrella!")
+    print(ids)
 
 
 
